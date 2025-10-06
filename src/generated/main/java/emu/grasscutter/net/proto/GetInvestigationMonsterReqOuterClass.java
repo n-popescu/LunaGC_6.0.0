@@ -36,12 +36,16 @@ public final class GetInvestigationMonsterReqOuterClass {
     int getCityIdList(int index);
 
     /**
-     * <code>bool is_for_mark = 3;</code>
+     * <code>bool is_for_mark = 5;</code>
      * @return The isForMark.
      */
     boolean getIsForMark();
   }
   /**
+   * <pre>
+   * CmdId: 7397
+   * </pre>
+   *
    * Protobuf type {@code GetInvestigationMonsterReq}
    */
   public static final class GetInvestigationMonsterReq extends
@@ -109,7 +113,7 @@ public final class GetInvestigationMonsterReqOuterClass {
               input.popLimit(limit);
               break;
             }
-            case 24: {
+            case 40: {
 
               isForMark_ = input.readBool();
               break;
@@ -177,10 +181,10 @@ public final class GetInvestigationMonsterReqOuterClass {
     }
     private int cityIdListMemoizedSerializedSize = -1;
 
-    public static final int IS_FOR_MARK_FIELD_NUMBER = 3;
+    public static final int IS_FOR_MARK_FIELD_NUMBER = 5;
     private boolean isForMark_;
     /**
-     * <code>bool is_for_mark = 3;</code>
+     * <code>bool is_for_mark = 5;</code>
      * @return The isForMark.
      */
     @java.lang.Override
@@ -211,7 +215,7 @@ public final class GetInvestigationMonsterReqOuterClass {
         output.writeUInt32NoTag(cityIdList_.getInt(i));
       }
       if (isForMark_ != false) {
-        output.writeBool(3, isForMark_);
+        output.writeBool(5, isForMark_);
       }
       unknownFields.writeTo(output);
     }
@@ -238,7 +242,7 @@ public final class GetInvestigationMonsterReqOuterClass {
       }
       if (isForMark_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(3, isForMark_);
+          .computeBoolSize(5, isForMark_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -373,6 +377,10 @@ public final class GetInvestigationMonsterReqOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * CmdId: 7397
+     * </pre>
+     *
      * Protobuf type {@code GetInvestigationMonsterReq}
      */
     public static final class Builder extends
@@ -619,7 +627,7 @@ public final class GetInvestigationMonsterReqOuterClass {
 
       private boolean isForMark_ ;
       /**
-       * <code>bool is_for_mark = 3;</code>
+       * <code>bool is_for_mark = 5;</code>
        * @return The isForMark.
        */
       @java.lang.Override
@@ -627,7 +635,7 @@ public final class GetInvestigationMonsterReqOuterClass {
         return isForMark_;
       }
       /**
-       * <code>bool is_for_mark = 3;</code>
+       * <code>bool is_for_mark = 5;</code>
        * @param value The isForMark to set.
        * @return This builder for chaining.
        */
@@ -638,7 +646,7 @@ public final class GetInvestigationMonsterReqOuterClass {
         return this;
       }
       /**
-       * <code>bool is_for_mark = 3;</code>
+       * <code>bool is_for_mark = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearIsForMark() {
@@ -716,7 +724,7 @@ public final class GetInvestigationMonsterReqOuterClass {
     java.lang.String[] descriptorData = {
       "\n GetInvestigationMonsterReq.proto\"G\n\032Ge" +
       "tInvestigationMonsterReq\022\024\n\014city_id_list" +
-      "\030\001 \003(\r\022\023\n\013is_for_mark\030\003 \001(\010B\033\n\031emu.grass" +
+      "\030\001 \003(\r\022\023\n\013is_for_mark\030\005 \001(\010B\033\n\031emu.grass" +
       "cutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

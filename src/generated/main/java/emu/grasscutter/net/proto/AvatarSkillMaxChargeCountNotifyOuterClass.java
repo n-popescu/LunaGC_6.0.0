@@ -25,18 +25,22 @@ public final class AvatarSkillMaxChargeCountNotifyOuterClass {
     int getMaxChargeCount();
 
     /**
-     * <code>uint32 skill_id = 3;</code>
+     * <code>uint32 skill_id = 13;</code>
      * @return The skillId.
      */
     int getSkillId();
 
     /**
-     * <code>uint64 avatar_guid = 11;</code>
+     * <code>uint64 avatar_guid = 4;</code>
      * @return The avatarGuid.
      */
     long getAvatarGuid();
   }
   /**
+   * <pre>
+   * CmdId: 24318
+   * </pre>
+   *
    * Protobuf type {@code AvatarSkillMaxChargeCountNotify}
    */
   public static final class AvatarSkillMaxChargeCountNotify extends
@@ -81,9 +85,9 @@ public final class AvatarSkillMaxChargeCountNotifyOuterClass {
             case 0:
               done = true;
               break;
-            case 24: {
+            case 32: {
 
-              skillId_ = input.readUInt32();
+              avatarGuid_ = input.readUInt64();
               break;
             }
             case 64: {
@@ -91,9 +95,9 @@ public final class AvatarSkillMaxChargeCountNotifyOuterClass {
               maxChargeCount_ = input.readUInt32();
               break;
             }
-            case 88: {
+            case 104: {
 
-              avatarGuid_ = input.readUInt64();
+              skillId_ = input.readUInt32();
               break;
             }
             default: {
@@ -139,10 +143,10 @@ public final class AvatarSkillMaxChargeCountNotifyOuterClass {
       return maxChargeCount_;
     }
 
-    public static final int SKILL_ID_FIELD_NUMBER = 3;
+    public static final int SKILL_ID_FIELD_NUMBER = 13;
     private int skillId_;
     /**
-     * <code>uint32 skill_id = 3;</code>
+     * <code>uint32 skill_id = 13;</code>
      * @return The skillId.
      */
     @java.lang.Override
@@ -150,10 +154,10 @@ public final class AvatarSkillMaxChargeCountNotifyOuterClass {
       return skillId_;
     }
 
-    public static final int AVATAR_GUID_FIELD_NUMBER = 11;
+    public static final int AVATAR_GUID_FIELD_NUMBER = 4;
     private long avatarGuid_;
     /**
-     * <code>uint64 avatar_guid = 11;</code>
+     * <code>uint64 avatar_guid = 4;</code>
      * @return The avatarGuid.
      */
     @java.lang.Override
@@ -175,14 +179,14 @@ public final class AvatarSkillMaxChargeCountNotifyOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (skillId_ != 0) {
-        output.writeUInt32(3, skillId_);
+      if (avatarGuid_ != 0L) {
+        output.writeUInt64(4, avatarGuid_);
       }
       if (maxChargeCount_ != 0) {
         output.writeUInt32(8, maxChargeCount_);
       }
-      if (avatarGuid_ != 0L) {
-        output.writeUInt64(11, avatarGuid_);
+      if (skillId_ != 0) {
+        output.writeUInt32(13, skillId_);
       }
       unknownFields.writeTo(output);
     }
@@ -193,17 +197,17 @@ public final class AvatarSkillMaxChargeCountNotifyOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (skillId_ != 0) {
+      if (avatarGuid_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(3, skillId_);
+          .computeUInt64Size(4, avatarGuid_);
       }
       if (maxChargeCount_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(8, maxChargeCount_);
       }
-      if (avatarGuid_ != 0L) {
+      if (skillId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(11, avatarGuid_);
+          .computeUInt32Size(13, skillId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -340,6 +344,10 @@ public final class AvatarSkillMaxChargeCountNotifyOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * CmdId: 24318
+     * </pre>
+     *
      * Protobuf type {@code AvatarSkillMaxChargeCountNotify}
      */
     public static final class Builder extends
@@ -531,7 +539,7 @@ public final class AvatarSkillMaxChargeCountNotifyOuterClass {
 
       private int skillId_ ;
       /**
-       * <code>uint32 skill_id = 3;</code>
+       * <code>uint32 skill_id = 13;</code>
        * @return The skillId.
        */
       @java.lang.Override
@@ -539,7 +547,7 @@ public final class AvatarSkillMaxChargeCountNotifyOuterClass {
         return skillId_;
       }
       /**
-       * <code>uint32 skill_id = 3;</code>
+       * <code>uint32 skill_id = 13;</code>
        * @param value The skillId to set.
        * @return This builder for chaining.
        */
@@ -550,7 +558,7 @@ public final class AvatarSkillMaxChargeCountNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint32 skill_id = 3;</code>
+       * <code>uint32 skill_id = 13;</code>
        * @return This builder for chaining.
        */
       public Builder clearSkillId() {
@@ -562,7 +570,7 @@ public final class AvatarSkillMaxChargeCountNotifyOuterClass {
 
       private long avatarGuid_ ;
       /**
-       * <code>uint64 avatar_guid = 11;</code>
+       * <code>uint64 avatar_guid = 4;</code>
        * @return The avatarGuid.
        */
       @java.lang.Override
@@ -570,7 +578,7 @@ public final class AvatarSkillMaxChargeCountNotifyOuterClass {
         return avatarGuid_;
       }
       /**
-       * <code>uint64 avatar_guid = 11;</code>
+       * <code>uint64 avatar_guid = 4;</code>
        * @param value The avatarGuid to set.
        * @return This builder for chaining.
        */
@@ -581,7 +589,7 @@ public final class AvatarSkillMaxChargeCountNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint64 avatar_guid = 11;</code>
+       * <code>uint64 avatar_guid = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearAvatarGuid() {
@@ -659,8 +667,8 @@ public final class AvatarSkillMaxChargeCountNotifyOuterClass {
     java.lang.String[] descriptorData = {
       "\n%AvatarSkillMaxChargeCountNotify.proto\"" +
       "b\n\037AvatarSkillMaxChargeCountNotify\022\030\n\020ma" +
-      "x_charge_count\030\010 \001(\r\022\020\n\010skill_id\030\003 \001(\r\022\023" +
-      "\n\013avatar_guid\030\013 \001(\004B\033\n\031emu.grasscutter.n" +
+      "x_charge_count\030\010 \001(\r\022\020\n\010skill_id\030\r \001(\r\022\023" +
+      "\n\013avatar_guid\030\004 \001(\004B\033\n\031emu.grasscutter.n" +
       "et.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

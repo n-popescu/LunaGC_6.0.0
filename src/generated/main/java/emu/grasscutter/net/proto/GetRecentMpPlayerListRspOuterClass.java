@@ -19,41 +19,36 @@ public final class GetRecentMpPlayerListRspOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int32 retcode = 10;</code>
-     * @return The retcode.
-     */
-    int getRetcode();
-
-    /**
-     * <code>repeated .FriendBrief recent_mp_player_brief_list = 14;</code>
+     * <code>repeated .FriendBrief recent_mp_player_brief_list = 8;</code>
      */
     java.util.List<emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief> 
         getRecentMpPlayerBriefListList();
     /**
-     * <code>repeated .FriendBrief recent_mp_player_brief_list = 14;</code>
+     * <code>repeated .FriendBrief recent_mp_player_brief_list = 8;</code>
      */
     emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief getRecentMpPlayerBriefList(int index);
     /**
-     * <code>repeated .FriendBrief recent_mp_player_brief_list = 14;</code>
+     * <code>repeated .FriendBrief recent_mp_player_brief_list = 8;</code>
      */
     int getRecentMpPlayerBriefListCount();
     /**
-     * <code>repeated .FriendBrief recent_mp_player_brief_list = 14;</code>
+     * <code>repeated .FriendBrief recent_mp_player_brief_list = 8;</code>
      */
     java.util.List<? extends emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBriefOrBuilder> 
         getRecentMpPlayerBriefListOrBuilderList();
     /**
-     * <code>repeated .FriendBrief recent_mp_player_brief_list = 14;</code>
+     * <code>repeated .FriendBrief recent_mp_player_brief_list = 8;</code>
      */
     emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBriefOrBuilder getRecentMpPlayerBriefListOrBuilder(
         int index);
+
+    /**
+     * <code>int32 retcode = 11;</code>
+     * @return The retcode.
+     */
+    int getRetcode();
   }
   /**
-   * <pre>
-   * CmdId: 24279
-   * Obf: GPGJECPCLBN
-   * </pre>
-   *
    * Protobuf type {@code GetRecentMpPlayerListRsp}
    */
   public static final class GetRecentMpPlayerListRsp extends
@@ -100,18 +95,18 @@ public final class GetRecentMpPlayerListRspOuterClass {
             case 0:
               done = true;
               break;
-            case 80: {
-
-              retcode_ = input.readInt32();
-              break;
-            }
-            case 114: {
+            case 66: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 recentMpPlayerBriefList_ = new java.util.ArrayList<emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief>();
                 mutable_bitField0_ |= 0x00000001;
               }
               recentMpPlayerBriefList_.add(
                   input.readMessage(emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief.parser(), extensionRegistry));
+              break;
+            }
+            case 88: {
+
+              retcode_ = input.readInt32();
               break;
             }
             default: {
@@ -149,28 +144,17 @@ public final class GetRecentMpPlayerListRspOuterClass {
               emu.grasscutter.net.proto.GetRecentMpPlayerListRspOuterClass.GetRecentMpPlayerListRsp.class, emu.grasscutter.net.proto.GetRecentMpPlayerListRspOuterClass.GetRecentMpPlayerListRsp.Builder.class);
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 10;
-    private int retcode_;
-    /**
-     * <code>int32 retcode = 10;</code>
-     * @return The retcode.
-     */
-    @java.lang.Override
-    public int getRetcode() {
-      return retcode_;
-    }
-
-    public static final int RECENT_MP_PLAYER_BRIEF_LIST_FIELD_NUMBER = 14;
+    public static final int RECENT_MP_PLAYER_BRIEF_LIST_FIELD_NUMBER = 8;
     private java.util.List<emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief> recentMpPlayerBriefList_;
     /**
-     * <code>repeated .FriendBrief recent_mp_player_brief_list = 14;</code>
+     * <code>repeated .FriendBrief recent_mp_player_brief_list = 8;</code>
      */
     @java.lang.Override
     public java.util.List<emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief> getRecentMpPlayerBriefListList() {
       return recentMpPlayerBriefList_;
     }
     /**
-     * <code>repeated .FriendBrief recent_mp_player_brief_list = 14;</code>
+     * <code>repeated .FriendBrief recent_mp_player_brief_list = 8;</code>
      */
     @java.lang.Override
     public java.util.List<? extends emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBriefOrBuilder> 
@@ -178,26 +162,37 @@ public final class GetRecentMpPlayerListRspOuterClass {
       return recentMpPlayerBriefList_;
     }
     /**
-     * <code>repeated .FriendBrief recent_mp_player_brief_list = 14;</code>
+     * <code>repeated .FriendBrief recent_mp_player_brief_list = 8;</code>
      */
     @java.lang.Override
     public int getRecentMpPlayerBriefListCount() {
       return recentMpPlayerBriefList_.size();
     }
     /**
-     * <code>repeated .FriendBrief recent_mp_player_brief_list = 14;</code>
+     * <code>repeated .FriendBrief recent_mp_player_brief_list = 8;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief getRecentMpPlayerBriefList(int index) {
       return recentMpPlayerBriefList_.get(index);
     }
     /**
-     * <code>repeated .FriendBrief recent_mp_player_brief_list = 14;</code>
+     * <code>repeated .FriendBrief recent_mp_player_brief_list = 8;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBriefOrBuilder getRecentMpPlayerBriefListOrBuilder(
         int index) {
       return recentMpPlayerBriefList_.get(index);
+    }
+
+    public static final int RETCODE_FIELD_NUMBER = 11;
+    private int retcode_;
+    /**
+     * <code>int32 retcode = 11;</code>
+     * @return The retcode.
+     */
+    @java.lang.Override
+    public int getRetcode() {
+      return retcode_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -214,11 +209,11 @@ public final class GetRecentMpPlayerListRspOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (retcode_ != 0) {
-        output.writeInt32(10, retcode_);
-      }
       for (int i = 0; i < recentMpPlayerBriefList_.size(); i++) {
-        output.writeMessage(14, recentMpPlayerBriefList_.get(i));
+        output.writeMessage(8, recentMpPlayerBriefList_.get(i));
+      }
+      if (retcode_ != 0) {
+        output.writeInt32(11, retcode_);
       }
       unknownFields.writeTo(output);
     }
@@ -229,13 +224,13 @@ public final class GetRecentMpPlayerListRspOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (retcode_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(10, retcode_);
-      }
       for (int i = 0; i < recentMpPlayerBriefList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(14, recentMpPlayerBriefList_.get(i));
+          .computeMessageSize(8, recentMpPlayerBriefList_.get(i));
+      }
+      if (retcode_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(11, retcode_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -252,10 +247,10 @@ public final class GetRecentMpPlayerListRspOuterClass {
       }
       emu.grasscutter.net.proto.GetRecentMpPlayerListRspOuterClass.GetRecentMpPlayerListRsp other = (emu.grasscutter.net.proto.GetRecentMpPlayerListRspOuterClass.GetRecentMpPlayerListRsp) obj;
 
-      if (getRetcode()
-          != other.getRetcode()) return false;
       if (!getRecentMpPlayerBriefListList()
           .equals(other.getRecentMpPlayerBriefListList())) return false;
+      if (getRetcode()
+          != other.getRetcode()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -267,12 +262,12 @@ public final class GetRecentMpPlayerListRspOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + RETCODE_FIELD_NUMBER;
-      hash = (53 * hash) + getRetcode();
       if (getRecentMpPlayerBriefListCount() > 0) {
         hash = (37 * hash) + RECENT_MP_PLAYER_BRIEF_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getRecentMpPlayerBriefListList().hashCode();
       }
+      hash = (37 * hash) + RETCODE_FIELD_NUMBER;
+      hash = (53 * hash) + getRetcode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -369,11 +364,6 @@ public final class GetRecentMpPlayerListRspOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 24279
-     * Obf: GPGJECPCLBN
-     * </pre>
-     *
      * Protobuf type {@code GetRecentMpPlayerListRsp}
      */
     public static final class Builder extends
@@ -412,14 +402,14 @@ public final class GetRecentMpPlayerListRspOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        retcode_ = 0;
-
         if (recentMpPlayerBriefListBuilder_ == null) {
           recentMpPlayerBriefList_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           recentMpPlayerBriefListBuilder_.clear();
         }
+        retcode_ = 0;
+
         return this;
       }
 
@@ -447,7 +437,6 @@ public final class GetRecentMpPlayerListRspOuterClass {
       public emu.grasscutter.net.proto.GetRecentMpPlayerListRspOuterClass.GetRecentMpPlayerListRsp buildPartial() {
         emu.grasscutter.net.proto.GetRecentMpPlayerListRspOuterClass.GetRecentMpPlayerListRsp result = new emu.grasscutter.net.proto.GetRecentMpPlayerListRspOuterClass.GetRecentMpPlayerListRsp(this);
         int from_bitField0_ = bitField0_;
-        result.retcode_ = retcode_;
         if (recentMpPlayerBriefListBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             recentMpPlayerBriefList_ = java.util.Collections.unmodifiableList(recentMpPlayerBriefList_);
@@ -457,6 +446,7 @@ public final class GetRecentMpPlayerListRspOuterClass {
         } else {
           result.recentMpPlayerBriefList_ = recentMpPlayerBriefListBuilder_.build();
         }
+        result.retcode_ = retcode_;
         onBuilt();
         return result;
       }
@@ -505,9 +495,6 @@ public final class GetRecentMpPlayerListRspOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.GetRecentMpPlayerListRspOuterClass.GetRecentMpPlayerListRsp other) {
         if (other == emu.grasscutter.net.proto.GetRecentMpPlayerListRspOuterClass.GetRecentMpPlayerListRsp.getDefaultInstance()) return this;
-        if (other.getRetcode() != 0) {
-          setRetcode(other.getRetcode());
-        }
         if (recentMpPlayerBriefListBuilder_ == null) {
           if (!other.recentMpPlayerBriefList_.isEmpty()) {
             if (recentMpPlayerBriefList_.isEmpty()) {
@@ -533,6 +520,9 @@ public final class GetRecentMpPlayerListRspOuterClass {
               recentMpPlayerBriefListBuilder_.addAllMessages(other.recentMpPlayerBriefList_);
             }
           }
+        }
+        if (other.getRetcode() != 0) {
+          setRetcode(other.getRetcode());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -564,37 +554,6 @@ public final class GetRecentMpPlayerListRspOuterClass {
       }
       private int bitField0_;
 
-      private int retcode_ ;
-      /**
-       * <code>int32 retcode = 10;</code>
-       * @return The retcode.
-       */
-      @java.lang.Override
-      public int getRetcode() {
-        return retcode_;
-      }
-      /**
-       * <code>int32 retcode = 10;</code>
-       * @param value The retcode to set.
-       * @return This builder for chaining.
-       */
-      public Builder setRetcode(int value) {
-        
-        retcode_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 retcode = 10;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearRetcode() {
-        
-        retcode_ = 0;
-        onChanged();
-        return this;
-      }
-
       private java.util.List<emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief> recentMpPlayerBriefList_ =
         java.util.Collections.emptyList();
       private void ensureRecentMpPlayerBriefListIsMutable() {
@@ -608,7 +567,7 @@ public final class GetRecentMpPlayerListRspOuterClass {
           emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief, emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief.Builder, emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBriefOrBuilder> recentMpPlayerBriefListBuilder_;
 
       /**
-       * <code>repeated .FriendBrief recent_mp_player_brief_list = 14;</code>
+       * <code>repeated .FriendBrief recent_mp_player_brief_list = 8;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief> getRecentMpPlayerBriefListList() {
         if (recentMpPlayerBriefListBuilder_ == null) {
@@ -618,7 +577,7 @@ public final class GetRecentMpPlayerListRspOuterClass {
         }
       }
       /**
-       * <code>repeated .FriendBrief recent_mp_player_brief_list = 14;</code>
+       * <code>repeated .FriendBrief recent_mp_player_brief_list = 8;</code>
        */
       public int getRecentMpPlayerBriefListCount() {
         if (recentMpPlayerBriefListBuilder_ == null) {
@@ -628,7 +587,7 @@ public final class GetRecentMpPlayerListRspOuterClass {
         }
       }
       /**
-       * <code>repeated .FriendBrief recent_mp_player_brief_list = 14;</code>
+       * <code>repeated .FriendBrief recent_mp_player_brief_list = 8;</code>
        */
       public emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief getRecentMpPlayerBriefList(int index) {
         if (recentMpPlayerBriefListBuilder_ == null) {
@@ -638,7 +597,7 @@ public final class GetRecentMpPlayerListRspOuterClass {
         }
       }
       /**
-       * <code>repeated .FriendBrief recent_mp_player_brief_list = 14;</code>
+       * <code>repeated .FriendBrief recent_mp_player_brief_list = 8;</code>
        */
       public Builder setRecentMpPlayerBriefList(
           int index, emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief value) {
@@ -655,7 +614,7 @@ public final class GetRecentMpPlayerListRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .FriendBrief recent_mp_player_brief_list = 14;</code>
+       * <code>repeated .FriendBrief recent_mp_player_brief_list = 8;</code>
        */
       public Builder setRecentMpPlayerBriefList(
           int index, emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief.Builder builderForValue) {
@@ -669,7 +628,7 @@ public final class GetRecentMpPlayerListRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .FriendBrief recent_mp_player_brief_list = 14;</code>
+       * <code>repeated .FriendBrief recent_mp_player_brief_list = 8;</code>
        */
       public Builder addRecentMpPlayerBriefList(emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief value) {
         if (recentMpPlayerBriefListBuilder_ == null) {
@@ -685,7 +644,7 @@ public final class GetRecentMpPlayerListRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .FriendBrief recent_mp_player_brief_list = 14;</code>
+       * <code>repeated .FriendBrief recent_mp_player_brief_list = 8;</code>
        */
       public Builder addRecentMpPlayerBriefList(
           int index, emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief value) {
@@ -702,7 +661,7 @@ public final class GetRecentMpPlayerListRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .FriendBrief recent_mp_player_brief_list = 14;</code>
+       * <code>repeated .FriendBrief recent_mp_player_brief_list = 8;</code>
        */
       public Builder addRecentMpPlayerBriefList(
           emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief.Builder builderForValue) {
@@ -716,7 +675,7 @@ public final class GetRecentMpPlayerListRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .FriendBrief recent_mp_player_brief_list = 14;</code>
+       * <code>repeated .FriendBrief recent_mp_player_brief_list = 8;</code>
        */
       public Builder addRecentMpPlayerBriefList(
           int index, emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief.Builder builderForValue) {
@@ -730,7 +689,7 @@ public final class GetRecentMpPlayerListRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .FriendBrief recent_mp_player_brief_list = 14;</code>
+       * <code>repeated .FriendBrief recent_mp_player_brief_list = 8;</code>
        */
       public Builder addAllRecentMpPlayerBriefList(
           java.lang.Iterable<? extends emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief> values) {
@@ -745,7 +704,7 @@ public final class GetRecentMpPlayerListRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .FriendBrief recent_mp_player_brief_list = 14;</code>
+       * <code>repeated .FriendBrief recent_mp_player_brief_list = 8;</code>
        */
       public Builder clearRecentMpPlayerBriefList() {
         if (recentMpPlayerBriefListBuilder_ == null) {
@@ -758,7 +717,7 @@ public final class GetRecentMpPlayerListRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .FriendBrief recent_mp_player_brief_list = 14;</code>
+       * <code>repeated .FriendBrief recent_mp_player_brief_list = 8;</code>
        */
       public Builder removeRecentMpPlayerBriefList(int index) {
         if (recentMpPlayerBriefListBuilder_ == null) {
@@ -771,14 +730,14 @@ public final class GetRecentMpPlayerListRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .FriendBrief recent_mp_player_brief_list = 14;</code>
+       * <code>repeated .FriendBrief recent_mp_player_brief_list = 8;</code>
        */
       public emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief.Builder getRecentMpPlayerBriefListBuilder(
           int index) {
         return getRecentMpPlayerBriefListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .FriendBrief recent_mp_player_brief_list = 14;</code>
+       * <code>repeated .FriendBrief recent_mp_player_brief_list = 8;</code>
        */
       public emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBriefOrBuilder getRecentMpPlayerBriefListOrBuilder(
           int index) {
@@ -788,7 +747,7 @@ public final class GetRecentMpPlayerListRspOuterClass {
         }
       }
       /**
-       * <code>repeated .FriendBrief recent_mp_player_brief_list = 14;</code>
+       * <code>repeated .FriendBrief recent_mp_player_brief_list = 8;</code>
        */
       public java.util.List<? extends emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBriefOrBuilder> 
            getRecentMpPlayerBriefListOrBuilderList() {
@@ -799,14 +758,14 @@ public final class GetRecentMpPlayerListRspOuterClass {
         }
       }
       /**
-       * <code>repeated .FriendBrief recent_mp_player_brief_list = 14;</code>
+       * <code>repeated .FriendBrief recent_mp_player_brief_list = 8;</code>
        */
       public emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief.Builder addRecentMpPlayerBriefListBuilder() {
         return getRecentMpPlayerBriefListFieldBuilder().addBuilder(
             emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief.getDefaultInstance());
       }
       /**
-       * <code>repeated .FriendBrief recent_mp_player_brief_list = 14;</code>
+       * <code>repeated .FriendBrief recent_mp_player_brief_list = 8;</code>
        */
       public emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief.Builder addRecentMpPlayerBriefListBuilder(
           int index) {
@@ -814,7 +773,7 @@ public final class GetRecentMpPlayerListRspOuterClass {
             index, emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief.getDefaultInstance());
       }
       /**
-       * <code>repeated .FriendBrief recent_mp_player_brief_list = 14;</code>
+       * <code>repeated .FriendBrief recent_mp_player_brief_list = 8;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief.Builder> 
            getRecentMpPlayerBriefListBuilderList() {
@@ -833,6 +792,37 @@ public final class GetRecentMpPlayerListRspOuterClass {
           recentMpPlayerBriefList_ = null;
         }
         return recentMpPlayerBriefListBuilder_;
+      }
+
+      private int retcode_ ;
+      /**
+       * <code>int32 retcode = 11;</code>
+       * @return The retcode.
+       */
+      @java.lang.Override
+      public int getRetcode() {
+        return retcode_;
+      }
+      /**
+       * <code>int32 retcode = 11;</code>
+       * @param value The retcode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRetcode(int value) {
+        
+        retcode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 retcode = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRetcode() {
+        
+        retcode_ = 0;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -903,8 +893,8 @@ public final class GetRecentMpPlayerListRspOuterClass {
     java.lang.String[] descriptorData = {
       "\n\036GetRecentMpPlayerListRsp.proto\032\021Friend" +
       "Brief.proto\"^\n\030GetRecentMpPlayerListRsp\022" +
-      "\017\n\007retcode\030\n \001(\005\0221\n\033recent_mp_player_bri" +
-      "ef_list\030\016 \003(\0132\014.FriendBriefB\033\n\031emu.grass" +
+      "1\n\033recent_mp_player_brief_list\030\010 \003(\0132\014.F" +
+      "riendBrief\022\017\n\007retcode\030\013 \001(\005B\033\n\031emu.grass" +
       "cutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -917,7 +907,7 @@ public final class GetRecentMpPlayerListRspOuterClass {
     internal_static_GetRecentMpPlayerListRsp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_GetRecentMpPlayerListRsp_descriptor,
-        new java.lang.String[] { "Retcode", "RecentMpPlayerBriefList", });
+        new java.lang.String[] { "RecentMpPlayerBriefList", "Retcode", });
     emu.grasscutter.net.proto.FriendBriefOuterClass.getDescriptor();
   }
 
