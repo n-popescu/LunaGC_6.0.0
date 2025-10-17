@@ -1,0 +1,59 @@
+# Build .jar on push/PR to main (auto-detects Maven or Gradle)
+name: Build JAR
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch: {}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Build (Maven or Gradle)
+        run: |
+          set -e
+          # Prefer Maven if pom.xml exists
+          if [ -f pom.xml ]; then
+            echo "Detected Maven project — running mvn package"
+            mvn -B -DskipTests package
+          elif [ -f build.gradle ] || [ -f build.gradle.kts ]; then
+            echo "Detected Gradle project — running ./gradlew build"
+            chmod +x gradlew || true
+            ./gradlew build -x test
+          else
+            echo "No pom.xml or build.gradle found — cannot build the Java project" >&2
+            exit 1
+          fi
+
+      - name: Collect JAR artifacts
+        run: |
+          mkdir -p artifacts
+          # Copy jar files while avoiding common paths we don't want
+          find . -type f -name "*.jar" -not -path "./.gradle/*" -not -path "./node_modules/*" -maxdepth 6 -exec cp --parents {} artifacts/ \; || true
+          echo "Artifacts contents:"
+          ls -R artifacts || true
+          if [ -z "$(ls -A artifacts 2>/dev/null)" ]; then
+            echo "No JAR files found after build" >&2
+            exit 1
+          fi
+
+      - name: Upload built JARs
+        uses: actions/upload-artifact@v4
+        with:
+          name: built-jars
+          path: artifacts/

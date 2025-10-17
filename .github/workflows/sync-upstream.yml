@@ -1,0 +1,42 @@
+# Keep your fork up to date with an upstream repository (scheduled + manual)
+name: Sync fork with upstream
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # every hour; change if you want
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+env:
+  # REQUIRED: set this to the original repo you forked, in the form owner/repo
+  UPSTREAM_REPO: 'pmagixc/LunaGC_6.0.0'
+  # Branch on the upstream to follow
+  UPSTREAM_BRANCH: 'main'
+  # Branch in your fork to update
+  TARGET_BRANCH: 'main'
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout target branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ env.TARGET_BRANCH }}
+          fetch-depth: 0
+
+      - name: Add upstream remote and fetch
+        run: |
+          git remote add upstream https://github.com/${{ env.UPSTREAM_REPO }}.git || true
+          git fetch upstream --no-tags
+
+      - name: Merge upstream into target
+        run: |
+          git checkout ${{ env.TARGET_BRANCH }}
+          # Try fast-forward or merge; if merge conflicts, fail so you resolve manually.
+          git merge --no-edit upstream/${{ env.UPSTREAM_BRANCH }} || (echo "Merge failed (conflict). Please resolve manually." && exit 1)
+
+      - name: Push merged changes to fork
+        run: git push origin ${{ env.TARGET_BRANCH }}
