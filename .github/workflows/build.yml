@@ -32,9 +32,9 @@ jobs:
             echo "Detected Maven project — running mvn package"
             mvn -B -DskipTests package
           elif [ -f build.gradle ] || [ -f build.gradle.kts ]; then
-            echo "Detected Gradle project — running ./gradlew build"
+            echo "Detected Gradle project — running ./gradlew jar"
             chmod +x gradlew || true
-            ./gradlew build -x test
+            ./gradlew jar -x test
           else
             echo "No pom.xml or build.gradle found — cannot build the Java project" >&2
             exit 1
