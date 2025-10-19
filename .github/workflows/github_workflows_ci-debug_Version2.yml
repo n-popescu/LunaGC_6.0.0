@@ -31,14 +31,13 @@ jobs:
 
       - name: Initialise variables (run the same task you run locally)
         run: |
-          # Use the exact task name you run locally:
-          ./gradlew toninitialiseVariables --no-daemon --console=plain
+         ./gradlew
         # If the task requires properties, you can pass them:
         # run: ./gradlew toninitialiseVariables -PsomeProp=${{ env.EXAMPLE_PROP }}
 
       - name: Build jar
         run: |
-          ./gradlew jar --no-daemon --console=plain
+          ./gradlew jar
 
       - name: Show produced artifacts & manifest
         run: |
