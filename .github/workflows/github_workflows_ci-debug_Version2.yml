@@ -1,0 +1,59 @@
+# Example workflow: run your "initialise variables" Gradle task, build jar, and run it.
+# Replace `toninitialiseVariables` and java-version with the exact task/version you use.
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-and-run:
+    runs-on: ubuntu-latest
+    env:
+      # Example: set values here or use secrets, then pass to Gradle with -P
+      EXAMPLE_PROP: "value-from-workflow"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17' # change as needed
+
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
+
+      - name: Show Java & Gradle versions
+        run: |
+          java -version
+          ./gradlew --version
+
+      - name: Initialise variables (run the same task you run locally)
+        run: |
+          # Use the exact task name you run locally:
+          ./gradlew toninitialiseVariables --no-daemon --console=plain
+        # If the task requires properties, you can pass them:
+        # run: ./gradlew toninitialiseVariables -PsomeProp=${{ env.EXAMPLE_PROP }}
+
+      - name: Build jar
+        run: |
+          ./gradlew jar --no-daemon --console=plain
+
+      - name: Show produced artifacts & manifest
+        run: |
+          ls -la build/libs || true
+          for f in build/libs/*; do
+            echo "=== $f ==="
+            file "$f" || true
+            sha256sum "$f" || true
+            echo "MANIFEST:"
+            unzip -p "$f" META-INF/MANIFEST.MF || true
+            jar tf "$f" | head -n 30 || true
+          done
+
+      - name: Run jar to test
+        run: |
+          JAR=$(ls build/libs/*.jar | head -n1)
+          echo "Running: java -jar $JAR"
+          java -jar "$JAR"
