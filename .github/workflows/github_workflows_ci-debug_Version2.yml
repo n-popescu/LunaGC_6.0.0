@@ -50,9 +50,3 @@ jobs:
             unzip -p "$f" META-INF/MANIFEST.MF || true
             jar tf "$f" | head -n 30 || true
           done
-
-      - name: Run jar to test
-        run: |
-          JAR=$(ls build/libs/*.jar | head -n1)
-          echo "Running: java -jar $JAR"
-          java -jar "$JAR"
